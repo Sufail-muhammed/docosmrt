@@ -93,7 +93,7 @@ class _PathologyTestAddState extends State<PathologyTestAdd> {
                 color: Color(0xffF1FDFF),
               ),
               padding: EdgeInsets.all(16.0),
-              child: Column(
+              child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
@@ -137,6 +137,7 @@ class _PathologyTestAddState extends State<PathologyTestAdd> {
                       ),
                     ],
                   ),
+                  SizedBox(height: 10),
                   Row(
                     children: [
                       Expanded(child: Text('1')),
@@ -145,6 +146,7 @@ class _PathologyTestAddState extends State<PathologyTestAdd> {
                       Expanded(child: Text('₹30')),
                     ],
                   ),
+                  SizedBox(height: 10.0),
                   Row(
                     children: [
                       Expanded(child: Text('2')),
@@ -153,6 +155,7 @@ class _PathologyTestAddState extends State<PathologyTestAdd> {
                       Expanded(child: Text('₹50')),
                     ],
                   ),
+                  SizedBox(height: 10.0),
                   Row(
                     children: [
                       Expanded(child: Text('3')),
@@ -161,12 +164,171 @@ class _PathologyTestAddState extends State<PathologyTestAdd> {
                       Expanded(child: Text('₹200')),
                     ],
                   ),
+                  SizedBox(height: 10.0),
+                  Row(
+                    children: [
+                      Expanded(child: Text('4')),
+                      Expanded(child: Text('X-Ray')),
+                      Expanded(child: Text('Chest X-Ray')),
+                      Expanded(child: Text('₹50')),
+                    ],
+                  ),
+                  SizedBox(height: 10.0),
+                  Row(
+                    children: [
+                      Expanded(child: Text('5')),
+                      Expanded(child: Text('X-Ray')),
+                      Expanded(child: Text('Chest X-Ray')),
+                      Expanded(child: Text('₹50')),
+                    ],
+                  ),
+
                 ],
               ),
             ),
           ),
 
-              SizedBoxes.smallSizedBox,
+
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Headings
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                 children: [
+                    Expanded(
+                      child: Text(
+                        'Discount',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xff01BFE1),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 8.5),
+                    Expanded(
+                      child: Text(
+                        'Discount Type',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xff01BFE1),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 8.5),
+                    Expanded(
+                      child: Text(
+                        'Discount Amount',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xff01BFE1),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 8.0),
+                // Containers
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      width: 110,
+                      height: 70,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Color(0xffF1FDFF),
+                      ),
+                      child: Center(
+                        child: Text('0',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17),),
+                      ),
+                    ),
+                    SizedBox(width: 8.5),
+                    Container(
+                      width: 110,
+                      height: 70,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Color(0xffF1FDFF),
+                      ),
+                      child: Center(
+                        child:
+                        DropdownButton<String>(
+                          hint: Text('Amt',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17),),
+                          onChanged: (String? newValue) {},
+                          items: <String>['amt1', 'amt2', 'amt3']
+                              .map<DropdownMenuItem<String>>((String value) {
+                            return DropdownMenuItem<String>(
+                              value: value,
+                              child: Text(value),
+                            );
+                          }).toList(),
+                          isExpanded: true,
+                          underline: SizedBox(),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 8.5),
+                    Container(
+                      width: 110,
+                      height: 70,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Color(0xffF1FDFF),
+                      ),
+                      child: Center(
+                        child: Text('₹0.00',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17),),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+
+          Container(
+            padding: EdgeInsets.all(16.0),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: Color(0xffF1FDFF),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text('Sub Total :'),
+                    Text('₹24000'),
+                  ],
+                ),
+                SizedBox(height: 8.0),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Grand Total :',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xff0867A6),
+                      ),
+                    ),
+                    Text(
+                      '₹24000',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xff0867A6),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+
+              SizedBoxes.largeSizedBox,
               Center(
                   child: ElevatedButton(
                       style:const  ButtonStyle(
