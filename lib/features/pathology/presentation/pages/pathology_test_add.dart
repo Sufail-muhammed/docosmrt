@@ -15,8 +15,6 @@ class PathologyTestAdd extends StatefulWidget {
 class _PathologyTestAddState extends State<PathologyTestAdd> {
   String selectedDoctor = 'Doctor';
   String testName = 'test';
-  String toothName = 'tooth';
-  String alloyType = 'alloy';
 
   @override
   Widget build(BuildContext context) {
@@ -141,45 +139,45 @@ class _PathologyTestAddState extends State<PathologyTestAdd> {
                   Row(
                     children: [
                       Expanded(child: Text('1')),
-                      Expanded(child: Text('Blood Test')),
+                      Expanded(child: Text('Haemoglobin')),
                       Expanded(child: Text('Complete Blood Count')),
-                      Expanded(child: Text('₹30')),
+                      Expanded(child: Text('₹1500')),
                     ],
                   ),
                   SizedBox(height: 10.0),
                   Row(
                     children: [
-                      Expanded(child: Text('2')),
-                      Expanded(child: Text('X-Ray')),
-                      Expanded(child: Text('Chest X-Ray')),
-                      Expanded(child: Text('₹50')),
+                      Expanded(child: Text('13')),
+                      Expanded(child: Text('Vitamin B2')),
+                      Expanded(child: Text('Vitamins')),
+                      Expanded(child: Text('₹2500')),
                     ],
                   ),
                   SizedBox(height: 10.0),
                   Row(
                     children: [
-                      Expanded(child: Text('3')),
-                      Expanded(child: Text('MRI')),
-                      Expanded(child: Text('Brain MRI')),
-                      Expanded(child: Text('₹200')),
+                      Expanded(child: Text('30')),
+                      Expanded(child: Text('Vitamin C')),
+                      Expanded(child: Text('Vitamins')),
+                      Expanded(child: Text('₹500')),
                     ],
                   ),
                   SizedBox(height: 10.0),
                   Row(
                     children: [
-                      Expanded(child: Text('4')),
-                      Expanded(child: Text('X-Ray')),
-                      Expanded(child: Text('Chest X-Ray')),
-                      Expanded(child: Text('₹50')),
+                      Expanded(child: Text('24')),
+                      Expanded(child: Text('HDL Cholesterol')),
+                      Expanded(child: Text('Cholesterol')),
+                      Expanded(child: Text('₹500')),
                     ],
                   ),
                   SizedBox(height: 10.0),
                   Row(
                     children: [
-                      Expanded(child: Text('5')),
-                      Expanded(child: Text('X-Ray')),
-                      Expanded(child: Text('Chest X-Ray')),
-                      Expanded(child: Text('₹50')),
+                      Expanded(child: Text('44')),
+                      Expanded(child: Text('Albumin')),
+                      Expanded(child: Text('Liver & Gastrointestinal')),
+                      Expanded(child: Text('₹1000')),
                     ],
                   ),
 
